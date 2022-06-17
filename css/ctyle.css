@@ -137,15 +137,16 @@ img {
   margin-left: auto;
 }
 
-.header-link-contact:hover,
-.header-link-contact:focus {
-  color: var(--accent-color);
+.header-list-contact {
+  display: block;
+  display: flex;
+  align-items: center;
 }
 
 .header-item-contact {
   display: block;
   display: flex;
-  align-items: center; 
+  align-items: center;
 }
 
 .header-link-contact {
@@ -153,52 +154,51 @@ img {
 }
 
 .header-email-icon {
+  margin-right: 10px;
   fill: currentColor;
 }
 
 .header-tel-icon {
+  margin-right: 10px;
   fill: currentColor;
 }
 
-.header-tel-icon:hover,
-.header-tel-icon:focus {
-  color: var(--accent-color);
-}
-
-.header-email {
+.header-email-link {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--text-color);
+  display: flex;
+  align-items: center;
   padding-top: 32px;
   padding-bottom: 32px;
-  margin-left: 10px;
 }
 
 
-.header-email:hover,
-.header-email:focus {
+.header-email-link:hover,
+.header-email-link:focus {
   color: var(--accent-color);  
 }
 
-.header-tel {
+.header-tel-link {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--text-color);
+  display: flex;
+  align-items: center;
   padding-top: 32px;
   padding-bottom: 32px;
-  margin-left: 10px;
 }
 
 .header-item-contact {
   margin-left: 50px;
 }
 
-.header-tel:hover,
-.header-tel:focus {
+.header-tel-link:hover,
+.header-tel-link:focus {
   color: var(--accent-color);
 }
 
@@ -216,6 +216,7 @@ img {
   background-size: cover;
   max-width: 1600px;
   height: 600px;
+  margin: 0 auto;
 }
 
 .container-hero {
@@ -263,24 +264,6 @@ img {
   margin: -1px;
 }
 
-.text-list-icon {
-  display: flex;
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-.text-item-icon:not(:last-child) {
-  margin-right: 30px;
-}
-
-.text-item-icon {
-  min-width: 270px;
-  padding-top: 25px;
-  padding-bottom: 25px;
-  background-color: #F5F4FA;
-  border-radius: 4px;
-}
-
 .text {
   padding-top: 94px;
   padding-bottom: 94px;
@@ -295,7 +278,18 @@ img {
 }
 
 .text-item {
- min-width: 270px;
+  min-width: 270px;
+}
+
+.text-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+  width: 270px;
+  height: 120px;
+  background-color: #F5F4FA;
+  border-radius: 4px;
 }
 
 .subtitle {
@@ -305,6 +299,7 @@ img {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--title-color);
+  margin-bottom: 10px;
 }
 
 .desc {
@@ -312,7 +307,6 @@ img {
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--text-color);
-  margin-top: 10px;
 }
 
 /*-------IMAGE-------*/
@@ -455,11 +449,11 @@ img {
 }
 
 .client-link {
-  min-width: 170px;
+  width: 170px;
   height: 92px;
   display: flex;
-  text-align: center;
   justify-content: center;
+  align-items: center;
   border: 1px solid #AFB1B8;
   border-radius: 4px;
   color: #AFB1B8;
@@ -469,7 +463,8 @@ img {
   fill: currentColor;
 }
 
-.client-link:hover {
+.client-link:hover,
+.client-link:focus {
  color: var(--accent-color);
  border-color: var(--accent-color);
 }
@@ -485,10 +480,7 @@ img {
 
 .footer-container {
   display: flex;
-}
-
-.footer-container-icon {
-  margin-left: 70px;
+  align-items: baseline;
 }
 
 .footer-logo {
@@ -563,21 +555,24 @@ img {
   color: var(--accent-color);
 }
 
+.footer-container-contacts {
+  margin-right: 70px;
+}
+
 .footer-title {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
+  display: block;
   text-transform: uppercase;
   color: #FFFFFF;
-  padding-top: 12px;
   margin-bottom: 20px;
 }
 
 
 .footer-list-icon {
   display: flex;
-  justify-content: center;
 }
 
 .footer-item-icon {
@@ -606,7 +601,8 @@ img {
   fill: currentColor;
 }
 
-.footer-link-icon:hover {
+.footer-link-icon:hover,
+.footer-link-icon:focus {
   background-color: var(--accent-color);
 }
 
@@ -687,6 +683,11 @@ img {
   margin-right: 50px;
 }
 
+.header-link-contact {
+  display: flex;
+  align-items: center;
+}
+
 .header-link-contact:hover,
 .header-link-contact:focus {
   color: var(--accent-color);
@@ -734,7 +735,6 @@ img {
   color: var(--text-color);
   padding-top: 32px;
   padding-bottom: 32px;
-  margin-left: 10px;
 }
 
 .header-email:hover,
@@ -750,7 +750,6 @@ img {
   color: var(--text-color);
   padding-top: 32px;
   padding-bottom: 32px;
-  margin-left: 10px;
 }
 
 .header-item-contact {
@@ -894,7 +893,7 @@ img {
 }
 
 .projects-item {
-  flex-basis: calc(100%/3-30px);
+  flex-basis: calc(100% / 3 - 30px);
   margin: 15px;
 }
 
@@ -902,7 +901,8 @@ img {
   display: block;
 }
 
-.projects-item:hover {
+.projects-link:hover,
+.projects-link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
@@ -937,10 +937,7 @@ img {
 
 .footer-container {
   display: flex;
-}
-
-.footer-container-icon {
-  margin-left: 70px;
+  align-items: baseline;
 }
 
 .footer-logo {
@@ -975,7 +972,7 @@ img {
   font-style: normal;
   font-size: 14px;
   line-height: 1.71;
-  letter-spacing: 0.03em;    
+  letter-spacing: 0.03em;
   color: var(--header-color);
 }
 
@@ -985,7 +982,7 @@ img {
 }
 
 .footer-email {
-  font-style: normal; 
+  font-style: normal;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
@@ -1002,7 +999,7 @@ img {
 }
 
 .footer-tel {
-  font-style: normal;  
+  font-style: normal;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
@@ -1015,28 +1012,31 @@ img {
   color: var(--accent-color);
 }
 
+.footer-container-contacts {
+  margin-right: 70px;
+}
+
 .footer-title {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
+  display: block;
   text-transform: uppercase;
   color: #FFFFFF;
-  /*padding-top: 12px;
-  margin-bottom: 20px;*/
+  margin-bottom: 20px;
 }
 
 
 .footer-list-icon {
   display: flex;
-  justify-content: center;
 }
 
 .footer-item-icon {
   width: 44px;
   height: 44px;
   margin-right: 10px;
-  
+
 }
 
 .footer-item-icon :first-child {
@@ -1058,7 +1058,7 @@ img {
   fill: currentColor;
 }
 
-.footer-link-icon:hover 
+.footer-link-icon:hover,
 .footer-link-icon:focus {
   background-color: var(--accent-color);
 }
